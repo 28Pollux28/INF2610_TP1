@@ -3,16 +3,25 @@
  * Automne 2024
  * SystemCalls - part2.c
  *
- * Ajoutez vos noms, prénoms et matricules
+ * VALENTIN LEMAIRE 2409221
+ * KAMIL MAARITE 2152653
 */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
 
 void part21 ()
 {
-    // TODO
+    //77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)
+    //77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n
+    char printfStr[]="77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)";
+    for(int i =0; i < strlen(printfStr);i++){
+        printf(*printfStr[i]);
+    }
+    printf("\n");
 
 }
 

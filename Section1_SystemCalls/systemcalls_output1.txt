@@ -61,10 +61,11 @@ which sleep
 
 c)
 Chemin relatif
-sleep 1 # Dors pendqnt 1 seconde
+cd /usr/bin
+./sleep 1 # Dors pendqnt 1 seconde
 
 Chemin absolu
-/usr/bin/sleep1 # Dors pendant une seconde
+/usr/bin/sleep 1 # Dors pendant une seconde
 
 Chemin relatif répertoire courant : /usagers3/valema/Téléchargements/INF2610_TP1_GR4/Section1_SystemCalls
 ../../../../../usr/bin/sleep 1 # Dors pendant une seconde
@@ -73,4 +74,6 @@ d)
 sleep 1000
 ^C
 # Interrompt le sommeil et reviens au prompt bash
+
+
 
