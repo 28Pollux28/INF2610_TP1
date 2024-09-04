@@ -1,0 +1,76 @@
+1.1.1
+pwd  # Montre le répertoire courqnt
+/usagers3/valema/Téléchargements/INF2610_TP1_GR4/Section1_SystemCalls 
+
+cd /usagers3/valema/Téléchargements/INF2610_TP1_GR4/Section1_SystemCalls/  # Redirige vers le répertoire spécifié pqr le chemin
+
+ls # affiche le contenu du répertoire courant
+Makefile
+systemcalls_output1.txt
+systemcalls_output2.txt
+systemcalls_part1.c
+systemcalls_part2.c
+
+ls | sort # affiche le contenu du répertoire courant trié
+Makefile
+systemcalls_output1.txt
+systemcalls_output2.txt
+systemcalls_part1.c
+systemcalls_part2.c
+
+echo "message1" # affiche le texte "message1" à l’écran
+message1
+
+echo "message1" > foo.txt ; # crée le fichier foo.txt, enregistre le texte "message1"
+echo "message2" >> foo.txt; # dans le fichier, ajoute le texte "message2" à la fin du fichier,
+cat foo.txt # puis affiche le contenu du fichier
+message1
+message2
+
+unlink foo.txt ; ls # supprime le fichier foo.txt
+Makefile
+systemcalls_output1.txt
+systemcalls_output2.txt
+systemcalls_part1.c
+systemcalls_part2.c
+
+uname # affiche certaines informations concernant le système
+Linux
+
+uname -s # affiche le nom du noyau
+Linux
+
+uname -r # affiche la version du noyau
+5.14.0-480.el9.x86_64
+
+uname -o # affiche le nom de la combinaison noyau et interface utilisateur
+GNU/Linux
+
+uname -m # affiche le nom de l’architecture matérielle de la machine
+x86_64
+
+1.1.2
+a)
+echo $PATH
+/usr/local/cours/mpich-4/bin:/usr/local/cours/LOG8430/scitools/bin/linux64:/usr/local/cours/mpich-4/bin:/usr/local/cours/LOG8430/scitools/bin/linux64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/usagers3/valema/.dotnet/tools:/opt/MATLAB/R2023b/bin:/usr/local/cours/inf1900/bin:/usr/local/cours/INF6603/bin:/usr/local/cours/inf6802/bin:/usr/local/cours/INF8410/bin:/usr/local/cours/INF8480/bin:/usr/local/cours/INF8986/bin:/usr/local/cours/JohnMullins/bin:/usr/local/cours/LOG8470/bin:/usr/local/cours/lttng/bin:/usr/local/cours/mpich-4/bin:/usr/local/cours/inf1900/SimulIDE_0.3.12-SR8-INF1900.3/bin:/usr/local/cours/inf1900/bin:/usr/local/cours/INF2705/vcpkg:/usr/local/cours/INF6101/minizinc:/usr/local/cours/INF6101/minizinc/bin:/usr/local/cours/INF6603/CPAchecker-1.3.4-unix/scripts:/usr/local/cours/INF6603/llbmc-2013.1-Linux_64/bin:/usr/local/cours/INF6603/uppaal64-4.1.19:/usr/local/cours/INF6603/uppaal-tiga-0.18:/usr/local/cours/INF8215/minizinc:/usr/local/cours/INF8215/minizinc/bin:/opt/GraphDBFree:/usr/local/cours/IntelliJ/idea-IC-192.7142.36/bin:/usr/local/cours/lttng/bin:/usr/local/cours/inf1900/bin:/usr/local/cours/INF6603/bin:/usr/local/cours/inf6802/bin:/usr/local/cours/INF8410/bin:/usr/local/cours/INF8480/bin:/usr/local/cours/INF8986/bin:/usr/local/cours/JohnMullins/bin:/usr/local/cours/LOG8470/bin:/usr/local/cours/lttng/bin:/usr/local/cours/mpich-4/bin:/usr/local/cours/inf1900/SimulIDE_0.3.12-SR8-INF1900.3/bin:/usr/local/cours/inf1900/bin:/usr/local/cours/INF2705/vcpkg:/usr/local/cours/INF6101/minizinc:/usr/local/cours/INF6101/minizinc/bin:/usr/local/cours/INF6603/CPAchecker-1.3.4-unix/scripts:/usr/local/cours/INF6603/llbmc-2013.1-Linux_64/bin:/usr/local/cours/INF6603/uppaal64-4.1.19:/usr/local/cours/INF6603/uppaal-tiga-0.18:/usr/local/cours/INF8215/minizinc:/usr/local/cours/INF8215/minizinc/bin:/opt/GraphDBFree:/usr/local/cours/IntelliJ/idea-IC-192.7142.36/bin:/usr/local/cours/lttng/bin
+# Affiche le contenu de la variable PATH
+
+b)
+which sleep
+/usr/bin/sleep # Affiche le chemin absolu du binaire sleep
+
+c)
+Chemin relatif
+sleep 1 # Dors pendqnt 1 seconde
+
+Chemin absolu
+/usr/bin/sleep1 # Dors pendant une seconde
+
+Chemin relatif répertoire courant : /usagers3/valema/Téléchargements/INF2610_TP1_GR4/Section1_SystemCalls
+../../../../../usr/bin/sleep 1 # Dors pendant une seconde
+
+d)
+sleep 1000
+^C
+# Interrompt le sommeil et reviens au prompt bash
+
