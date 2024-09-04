@@ -19,15 +19,16 @@ void part21 ()
     //77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n
     char printfStr[]="77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)";
     for(int i =0; i < strlen(printfStr);i++){
-        printf(*printfStr[i]);
+        printf("%c", printfStr[i]);
     }
-    printf("\n");
+    char writeStr[] = "77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n";
+    write(1,&writeStr,strlen(writeStr));
 
 }
 
 void part22 ()
 {
-    // TODO
+    setvbuf(stdout,null,_IONBF,1);
     
 }
 
