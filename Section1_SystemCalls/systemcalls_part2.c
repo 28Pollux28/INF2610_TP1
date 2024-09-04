@@ -12,24 +12,32 @@
 #include <unistd.h>
 #include <string.h>
 
+char printfStr[]="77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)";
+char writeStr[] = "77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n";
+
+
 
 void part21 ()
 {
     //77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)
     //77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n
-    char printfStr[]="77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)";
     for(int i =0; i < strlen(printfStr);i++){
         printf("%c", printfStr[i]);
     }
-    char writeStr[] = "77dbcb01f571f1c32s196c3a7d27f62e (printed using write)\n";
     write(1,&writeStr,strlen(writeStr));
 
 }
 
 void part22 ()
 {
-    setvbuf(stdout,null,_IONBF,1);
-    
+    setvbuf(stdout,NULL,_IONBF,0);
+
+    write(1,&writeStr,strlen(writeStr));
+
+    for(int i =0; i < strlen(printfStr);i++){
+        printf("%c", printfStr[i]);
+    }
+
 }
 
 int main (int argc, char* argv[])

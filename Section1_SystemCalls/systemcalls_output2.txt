@@ -1,1 +1,12 @@
-Hello world 2
+./systemcalls_part1 
+Hello world Ctrl+D
+Hello world
+
+./systemcalls_part2 1
+77dbcb01f571f1c32s196c3a7d27f62e (printed using write)
+77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)
+
+./systemcalls_part2 2
+77dbcb01f571f1c32s196c3a7d27f62e (printed using write)
+77dbcb01f571f1c32s196c3a7d27f62e (printed using printf)
+
