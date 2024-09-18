@@ -19,9 +19,9 @@ long somme[nb];
 
 
 // fonction exécutée par chaque thread créé
-void* contribution(void*p)
+void* contribution(void* p)
 {
-    // TODO
+  printf("Hello %d\n",*((int*) p));
 
   return NULL;
 }
@@ -29,7 +29,12 @@ void* contribution(void*p)
 
 void question2( )
 {
-    // TODO
+    pthread_t n;
+    for(int i=0;i<nb;i++){
+      printf("test %d\n",i);
+      pthread_create(&n, NULL, contribution, &i);
+    }
+    
     
 }
 

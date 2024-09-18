@@ -1,0 +1,82 @@
+3.1
+40962 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f0496c61a10) = 40963
+40962 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f0496c61a10) = 40964
+40963 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40962 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40964 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40962 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40965
+40962 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40963 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40966
+40965 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40962 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40968
+40964 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40967
+40968 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40964 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40966 +++ exited with 0 +++
+40965 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40969
+40963 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40966, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40968 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40970
+40968 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40964 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40971
+40963 +++ exited with 0 +++
+40962 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40963, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40968 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40972
+40970 +++ exited with 0 +++
+40967 +++ exited with 0 +++
+40968 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40970, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40971 +++ exited with 0 +++
+40969 +++ exited with 0 +++
+40968 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+40965 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40969, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40964 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40967, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40972 +++ exited with 0 +++
+40965 +++ exited with 0 +++
+40968 <... clone resumed>, child_tidptr=0x7f0496c61a10) = 40973
+40962 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40965, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40968 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40972, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40964 +++ exited with 0 +++
+40962 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40964, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40973 +++ exited with 0 +++
+40968 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40973, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40968 +++ exited with 0 +++
+40962 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=40968, si_uid=36604, si_status=0, si_utime=0, si_stime=0} ---
+40962 +++ exited with 0 +++
+
+3.2
+procLevel=0, procNum=0,  pid=78248, ppid=18489 
+procLevel=1, procNum=1,  pid=78249, ppid=78248 
+procLevel=1, procNum=2,  pid=78250, ppid=78248 
+procLevel=1, procNum=3,  pid=78251, ppid=78248 
+procLevel=1, procNum=4,  pid=78254, ppid=78248 
+procLevel=2, procNum=1,  pid=78252, ppid=78249 
+procLevel=2, procNum=2,  pid=78253, ppid=78250 
+procLevel=2, procNum=3,  pid=78256, ppid=78250 
+procLevel=2, procNum=4,  pid=78255, ppid=78251 
+procLevel=2, procNum=5,  pid=78257, ppid=78254 
+procLevel=2, procNum=6,  pid=78258, ppid=78254 
+procLevel=2, procNum=7,  pid=78259, ppid=78254
+
+3.3
+procLevel=0, procNum=0,  pid=156834, ppid=18489 
+procLevel=1, procNum=1,  pid=156835, ppid=156834 
+procLevel=1, procNum=2,  pid=156836, ppid=156834 
+procLevel=1, procNum=3,  pid=156837, ppid=156834 
+procLevel=1, procNum=4,  pid=156839, ppid=156834 
+procLevel=2, procNum=1,  pid=156838, ppid=156835 
+procLevel=2, procNum=2,  pid=156840, ppid=156836 
+procLevel=2, procNum=3,  pid=156842, ppid=156836 
+procLevel=2, procNum=4,  pid=156841, ppid=156837 
+procLevel=2, procNum=5,  pid=156843, ppid=156839 
+procLevel=2, procNum=6,  pid=156844, ppid=156839 
+procLevel=2, procNum=7,  pid=156845, ppid=156839
+Total de descendants créés = 11
+
+3.4
+total 44
+drwx------ 2 valema gigl  4096 18 sep 08:31 libprocesslab
+-rwx------ 1 valema gigl   415 18 sep 08:31 Makefile
+-rwx------ 1 valema gigl  4552 18 sep 09:28 processes_output.txt
+-rwx------ 1 valema gigl  2326 18 sep 09:27 processes_part1.c
+-rwx------ 1 valema gigl   590 18 sep 08:31 processes_part2.c
+-rwx------ 1 valema gigl 18576 18 sep 09:27 processlab
+
