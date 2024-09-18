@@ -80,3 +80,27 @@ drwx------ 2 valema gigl  4096 18 sep 08:31 libprocesslab
 -rwx------ 1 valema gigl   590 18 sep 08:31 processes_part2.c
 -rwx------ 1 valema gigl 18576 18 sep 09:27 processlab
 
+4.1
+nb=1:
+Somme totale calculée = 500000500000, Somme totale réelle = 500000500000
+
+real	0m0,008s
+user	0m0,006s
+sys	    0m0,002s
+
+nb=4:
+Somme totale calculée = 500000500000, Somme totale réelle = 500000500000
+
+real	0m0,012s
+user	0m0,007s
+sys	    0m0,003s
+
+nb=8:
+Somme totale calculée = 500000500000, Somme totale réelle = 500000500000
+
+real	0m0,005s
+user	0m0,008s
+sys	    0m0,002s
+
+
+
