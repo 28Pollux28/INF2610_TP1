@@ -18,13 +18,16 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 
     result->rows = A->rows;
     result->cols = B->cols;
+
     // Tableau 2D de taille ligne * colonne
     // Allocation des lignes
     result->matrix = (short**)malloc(sizeof(short*) * result->rows);
+
     // Pour chaque ligne, allocation des colonnes
     for(int i = 0; i < result->rows; i++) {
         result->matrix[i] = (short*)malloc(sizeof(short) * result->cols);
     }
+
     // Calcul du produit
     for(int i = 0; i < result->rows; i++) {
         for(int j = 0; j < result->cols; j++) {
@@ -45,7 +48,7 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 // {
 //     Matrix* A = (Matrix*)malloc(sizeof(Matrix));
 //     A->rows = 2;
-//     A->cols = 3;
+//     A->cols = 4;
 //     A->matrix = (short**)malloc(sizeof(short*) * A->rows);
 //     for(int i = 0; i < A->rows; i++) {
 //         A->matrix[i] = (short*)malloc(sizeof(short) * A->cols);
@@ -68,6 +71,14 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 //         }
 //     }
 //     Matrix* C = multiply(A, B);
+//     if(C == NULL) {
+//         printf("Erreur, produit matriciel invalide\n");
+//         free(A->matrix);
+//         free(A);
+//         free(B->matrix);
+//         free(B);
+//         return 1;
+//     }
 //     for(int i = 0; i < C->rows; i++) {
 //         for(int j = 0; j < C->cols; j++) {
 //             printf("%d ", C->matrix[i][j]);
