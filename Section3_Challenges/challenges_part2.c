@@ -107,9 +107,8 @@ void* multiply_thread(void* args) {
     Matrix* result = a->result;
     // Calcul du produit
     for(int i = row; i < end; i++) {
-        for(int j = 0; j < result->cols; j++) {
-            result->matrix[i][j] = 0;
-            for(int k = 0; k < A->cols; k++) {
+        for(int k = 0; k < A->cols; k++) {
+            for(int j = 0; j < result->cols; j++) {
                 result->matrix[i][j] += A->matrix[i][k] * B->matrix[k][j];
             }
         }
