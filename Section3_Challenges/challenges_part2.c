@@ -10,7 +10,7 @@
 #define MAX_THREADS 8
 
 typedef struct {
-    Matrix* A;
+    short* A;
     Matrix* B;
     Matrix* result;
     int row;
@@ -67,9 +67,9 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     
     //utilisation de threads
     pthread_t threads[A->rows];
-    for(int i = 0; i < A->rows; i+=2) {
+    for(int i = 0; i < A->rows; i+=1) {
         multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
-        args->A = A;
+        args->A = A->matrix[i];
         args->B = B;
         args->result = result;
         args->row = i;
@@ -80,7 +80,7 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     }
 
     // Attente de la fin des threads
-    for(int i = 0; i < A->rows; i+=2) {
+    for(int i = 0; i < A->rows; i+=1) {
         pthread_join(threads[i], NULL);
     }
 
@@ -99,23 +99,23 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 void* multiply_thread(void* args) {
     // Récupération des arguments
     multiply_args* a = (multiply_args*)args;
-    Matrix* A = a->A;
+    short* A = a->A;
     Matrix* B = a->B;
     int row = a->row;
     Matrix* result = a->result;
     // Calcul du produit
     for(int j = 0; j < result->cols; j++) {
         result->matrix[row][j] = 0;
-        for(int k = 0; k < A->cols; k++) {
-            result->matrix[row][j] += A->matrix[row][k] * B->matrix[k][j];
+        for(int k = 0; k < B->rows; k++) {
+            result->matrix[row][j] += A[k] * B->matrix[k][j];
         }
     }
-    for(int j = 0; j < result->cols; j++) {
-        result->matrix[row+1][j] = 0;
-        for(int k = 0; k < A->cols; k++) {
-            result->matrix[row+1][j] += A->matrix[row+1][k] * B->matrix[k][j];
-        }
-    }
+    // for(int j = 0; j < result->cols; j++) {
+    //     result->matrix[row+1][j] = 0;
+    //     for(int k = 0; k < A->cols; k++) {
+    //         result->matrix[row+1][j] += A->matrix[row+1][k] * B->matrix[k][j];
+    //     }
+    // }
 
 
     
