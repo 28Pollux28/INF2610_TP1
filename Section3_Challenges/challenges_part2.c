@@ -10,11 +10,11 @@
 #define MAX_THREADS 8
 
 typedef struct {
-    short* A;
-    short* A2;
+    Matrix* A;
     Matrix* B;
     Matrix* result;
     int row;
+    int end;
     int debug;
     } multiply_args;
 
@@ -68,21 +68,20 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     
     //utilisation de threads
     pthread_t threads[A->rows];
-    for(int i = 0; i < A->rows; i+=2) {
+    for(int i = 0; i < A->rows; i+=10) {
         multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
-        args->A = A->matrix[i];
-        args->A2 = A->matrix[i+1];
+        args->A = A;
         args->B = B;
         args->result = result;
         args->row = i;
-        // args->rows_end = (i + 1) * result->rows / MAX_THREADS;
+        args->end = (i + 10) > A->rows ? A->rows : i + 10;
         args->debug = i==A->rows+1;
         // printf("start: %d, end: %d\n", args->rows_start, args->rows_end);
         pthread_create(&threads[i], NULL, (void*(*)(void*))multiply_thread, args);
     }
 
     // Attente de la fin des threads
-    for(int i = 0; i < A->rows; i+=2) {
+    for(int i = 0; i < A->rows; i+=10) {
         pthread_join(threads[i], NULL);
     }
 
@@ -101,22 +100,18 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 void* multiply_thread(void* args) {
     // Récupération des arguments
     multiply_args* a = (multiply_args*)args;
-    short* A = a->A;
-    short* A2 = a->A2;
+    Matrix* A = a->A;
     Matrix* B = a->B;
     int row = a->row;
+    int end = a->end;
     Matrix* result = a->result;
     // Calcul du produit
-    for(int j = 0; j < result->cols; j++) {
-        result->matrix[row][j] = 0;
-        for(int k = 0; k < B->rows; k++) {
-            result->matrix[row][j] += A[k] * B->matrix[k][j];
-        }
-    }
-    for(int j = 0; j < result->cols; j++) {
-        result->matrix[row+1][j] = 0;
-        for(int k = 0; k < B->rows; k++) {
-            result->matrix[row+1][j] += A2[k] * B->matrix[k][j];
+    for(int i = row; i < end; i++) {
+        for(int j = 0; j < result->cols; j++) {
+            result->matrix[i][j] = 0;
+            for(int k = 0; k < A->cols; k++) {
+                result->matrix[i][j] += A->matrix[i][k] * B->matrix[k][j];
+            }
         }
     }
 
