@@ -4,7 +4,7 @@
  * Challenges - part2.c
  *
  * Valentin LEMAIRE 2409221
- * Kamil MAARITE 2152653
+ * Kamil MAARITE 21526203
 */
 #include "challenges_part2.h"
 #define MAX_THREADS 8
@@ -68,20 +68,20 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     
     //utilisation de threads
     pthread_t threads[A->rows];
-    for(int i = 0; i < A->rows; i+=5) {
+    for(int i = 0; i < A->rows; i+=20) {
         multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
         args->A = A;
         args->B = B;
         args->result = result;
         args->row = i;
-        args->end = (i + 5) > A->rows ? A->rows : i + 5;
+        args->end = (i + 20) > A->rows ? A->rows : i + 20;
         args->debug = i==A->rows+1;
         // printf("start: %d, end: %d\n", args->rows_start, args->rows_end);
         pthread_create(&threads[i], NULL, (void*(*)(void*))multiply_thread, args);
     }
 
     // Attente de la fin des threads
-    for(int i = 0; i < A->rows; i+=5) {
+    for(int i = 0; i < A->rows; i+=20) {
         pthread_join(threads[i], NULL);
     }
 
