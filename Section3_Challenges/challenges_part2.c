@@ -67,7 +67,7 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     
     //utilisation de threads
     pthread_t threads[A->rows];
-    for(int i = 0; i < A->rows; i++) {
+    for(int i = 0; i < A->rows; i+=2) {
         multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
         args->A = A;
         args->B = B;
@@ -80,7 +80,7 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     }
 
     // Attente de la fin des threads
-    for(int i = 0; i < A->rows; i++) {
+    for(int i = 0; i < A->rows; i+=2) {
         pthread_join(threads[i], NULL);
     }
 
@@ -108,6 +108,12 @@ void* multiply_thread(void* args) {
         result->matrix[row][j] = 0;
         for(int k = 0; k < A->cols; k++) {
             result->matrix[row][j] += A->matrix[row][k] * B->matrix[k][j];
+        }
+    }
+    for(int j = 0; j < result->cols; j++) {
+        result->matrix[row+1][j] = 0;
+        for(int k = 0; k < A->cols; k++) {
+            result->matrix[row+1][j] += A->matrix[row+1][k] * B->matrix[k][j];
         }
     }
 
