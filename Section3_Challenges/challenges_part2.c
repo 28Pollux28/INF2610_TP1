@@ -7,12 +7,37 @@
  * Kamil MAARITE 2152653
 */
 #include "challenges_part2.h"
+#define MAX_THREADS 8
+
+typedef struct {
+    Matrix* A;
+    Matrix* B;
+    Matrix* result;
+    int row;
+    int debug;
+    } multiply_args;
 
 Matrix* multiply(Matrix* A, Matrix* B) {
     // Vérifier la validité des matrices
-    if(A == NULL || B == NULL || A->cols != B->rows) {
+    if(A == NULL || B == NULL || A->rows <= 0 || A->cols <= 0 || B->rows <= 0 || B->cols <= 0 || A->cols != B->rows) {
         return NULL;
     }
+    // print A and B
+    // printf("Matrix A:\n");
+    // for(int i = 0; i < A->rows; i++) {
+    //     for(int j = 0; j < A->cols; j++) {
+    //         printf("%d ", A->matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("Matrix B:\n");
+    // for(int i = 0; i < B->rows; i++) {
+    //     for(int j = 0; j < B->cols; j++) {
+    //         printf("%d ", B->matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+
     // Créer la matrice résultat
     Matrix* result = (Matrix*)malloc(sizeof(Matrix));
 
@@ -29,16 +54,134 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     }
 
     // Calcul du produit
-    for(int i = 0; i < result->rows; i++) {
-        for(int j = 0; j < result->cols; j++) {
-            result->matrix[i][j] = 0;
-            for(int k = 0; k < A->cols; k++) {
-                result->matrix[i][j] += A->matrix[i][k] * B->matrix[k][j];
-            }
+    // for(int i = 0; i < result->rows; i++) {
+    //     for(int j = 0; j < result->cols; j++) {
+    //         result->matrix[i][j] = 0;
+    //         for(int k = 0; k < A->cols; k++) {
+    //             result->matrix[i][j] += A->matrix[i][k] * B->matrix[k][j];
+    //         }
+    //     }
+    // }
+    // printf("A size: %d x %d\n", A->rows, A->cols);
+    // printf("B size: %d x %d\n", B->rows, B->cols);
+    
+    //utilisation de threads
+    pthread_t threads[A->rows];
+    for(int i = 0; i < A->rows; i++) {
+        multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
+        args->A = A;
+        args->B = B;
+        args->result = result;
+        args->row = i;
+        // args->rows_end = (i + 1) * result->rows / MAX_THREADS;
+        args->debug = i==A->rows+1;
+        // printf("start: %d, end: %d\n", args->rows_start, args->rows_end);
+        pthread_create(&threads[i], NULL, (void*(*)(void*))multiply_thread, args);
+    }
+
+    // Attente de la fin des threads
+    for(int i = 0; i < A->rows; i++) {
+        pthread_join(threads[i], NULL);
+    }
+
+
+
+    // printf("result size: %d x %d\n", result->rows, result->cols);
+    // for(int i = 0; i < result->rows; i++) {
+    //     for(int j = 0; j < result->cols; j++) {
+    //         printf("%d ", result->matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    return result;
+}
+
+void* multiply_thread(void* args) {
+    // Récupération des arguments
+    multiply_args* a = (multiply_args*)args;
+    Matrix* A = a->A;
+    Matrix* B = a->B;
+    int row = a->row;
+    Matrix* result = a->result;
+    // Calcul du produit
+    for(int j = 0; j < result->cols; j++) {
+        result->matrix[row][j] = 0;
+        for(int k = 0; k < A->cols; k++) {
+            result->matrix[row][j] += A->matrix[row][k] * B->matrix[k][j];
         }
     }
 
-    return result;
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // int rows_start = a->rows_start;
+    // int rows_end = a->rows_end;
+    // Calcul du produit avec blocs
+    // Calcul optimal de la taille des blocs
+    // int block_size = max_block_size(30, rows_end-rows_start, B->cols);
+    // if(a->debug){
+    //     printf("A size: %d x %d\n", A->rows, A->cols);
+    //     printf("B size: %d x %d\n", B->rows, B->cols);
+    //     printf("rows_start: %d, rows_end: %d\n", rows_start, rows_end);
+    //     printf("block_size: %d\n", block_size);
+    // }
+    
+
+
+    // for(int ii = rows_start; ii < rows_end; ii+=block_size) {
+    //     for(int jj = 0; jj < result->cols; jj+=block_size) {
+    //         for(int kk = 0; kk < A->cols; kk += block_size) {
+    //             if(a->debug) {
+    //                 int i_range = min(block_size,rows_end-ii)+ii;
+    //                 int j_range = min(block_size,B->cols)+jj;
+    //                 int k_range = min(block_size,A->cols)+kk;
+    //                 printf("i range: %d - %d\n", ii, i_range);
+    //                 printf("j range: %d - %d\n", jj, j_range);
+    //                 printf("k range: %d - %d\n", kk, k_range);
+    //             }
+    //             for(int i = 0; i < min(block_size,rows_end-ii); i++) {
+    //                 for(int j = 0; j < min(block_size,B->cols-jj); j++) {
+    //                     for(int k = 0; k < min(block_size,A->cols-kk); k++) {
+    //                         int iii = i+ii;
+    //                         int jjj = jj+j;
+    //                         int kkk = k+kk;
+    //                         if(a->debug){
+    //                             printf("ii+i=%d, jj+j=%d, kk+k=%d, kk=%d, k=%d\n",iii,jjj,kkk,kk,k);
+    //                         }
+    //                         result->matrix[ii+i][jj+j] += A->matrix[ii+i][kk+k] * B->matrix[kk+k][jj+j];
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // Libération de la mémoire
+    free(a);
+
+    return NULL;
+}
+
+int max_block_size(int block_size, int rows, int cols) {
+    int max_matrix_size = min(rows, cols);
+    return min(max_matrix_size, block_size);
+}
+
+int min(int a, int b) {
+    return a < b ? a : b;
 }
 
 
@@ -47,7 +190,7 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 // int main(int argc, char*argv[])
 // {
 //     Matrix* A = (Matrix*)malloc(sizeof(Matrix));
-//     A->rows = 2;
+//     A->rows = 4;
 //     A->cols = 4;
 //     A->matrix = (short**)malloc(sizeof(short*) * A->rows);
 //     for(int i = 0; i < A->rows; i++) {
@@ -59,8 +202,8 @@ Matrix* multiply(Matrix* A, Matrix* B) {
 //         }
 //     }
 //     Matrix* B = (Matrix*)malloc(sizeof(Matrix));
-//     B->rows = 3;
-//     B->cols = 2;
+//     B->rows = 4;
+//     B->cols = 4;
 //     B->matrix = (short**)malloc(sizeof(short*) * B->rows);
 //     for(int i = 0; i < B->rows; i++) {
 //         B->matrix[i] = (short*)malloc(sizeof(short) * B->cols);

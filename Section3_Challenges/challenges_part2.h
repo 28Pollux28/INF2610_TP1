@@ -22,4 +22,7 @@ typedef struct {
 } Matrix;
 
 Matrix* multiply(Matrix* A, Matrix* B);
+void* multiply_thread(void* args);
+int max_block_size(int block_size, int rows, int cols);
+int min(int a, int b);
 #endif
