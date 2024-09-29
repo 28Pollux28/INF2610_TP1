@@ -68,20 +68,20 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     
     //utilisation de threads
     pthread_t threads[A->rows];
-    for(int i = 0; i < A->rows; i+=10) {
+    for(int i = 0; i < A->rows; i+=5) {
         multiply_args* args = (multiply_args*)malloc(sizeof(multiply_args));
         args->A = A;
         args->B = B;
         args->result = result;
         args->row = i;
-        args->end = (i + 10) > A->rows ? A->rows : i + 10;
+        args->end = (i + 5) > A->rows ? A->rows : i + 5;
         args->debug = i==A->rows+1;
         // printf("start: %d, end: %d\n", args->rows_start, args->rows_end);
         pthread_create(&threads[i], NULL, (void*(*)(void*))multiply_thread, args);
     }
 
     // Attente de la fin des threads
-    for(int i = 0; i < A->rows; i+=10) {
+    for(int i = 0; i < A->rows; i+=5) {
         pthread_join(threads[i], NULL);
     }
 
