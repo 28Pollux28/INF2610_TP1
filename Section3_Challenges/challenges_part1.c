@@ -13,39 +13,49 @@
 int main(int argc, char*argv[])
 {
     char path[MAX_PATH_LENGTH]= ROOT_PATH;
-    DIR *d;
-    struct dirent *dir;
+    int nombre_fichier_texte;
     while(1){
+        struct dirent **namelist;
+        int n;
         label:
-        d = opendir(path);
-        if (d) {
-            printf("PATH: %s\nDID: %d\nPDID: %d\n",path,getpid(),getppid());
-            printf("FILES:\n");
-            while ((dir = readdir(d)) != NULL) {
-                if(dir->d_type == DT_DIR){
-                    if(strcmp(dir->d_name,".") == 0 || strcmp(dir->d_name,"..") == 0) continue; // Omit the "." and ".." folders
-                    if(fork()==0){
-                        strcat(path,"/");
-                        strcat(path,dir->d_name);
-                        goto label;
-                    }
-                    wait(NULL);
-                } else {
-
+        nombre_fichier_texte = 0;
+        n = scandir(path, &namelist, NULL, alphasort);
+        if (n == -1) {
+            perror("scandir");
+            exit(-1);
+        }
+        // namelist[n-1] = "." and namelist[n-2] = ".."
+        printf("PATH: %s\nDID: %lu\nPDID: %lu\n",path, namelist[n-1]->d_ino, namelist[n-2]->d_ino);
+        printf("FILES:\n");
+        while (n--) {
+            if(namelist[n]->d_type == DT_DIR){
+                if(strcmp(namelist[n]->d_name,".") == 0 || strcmp(namelist[n]->d_name,"..") == 0){
+                    free(namelist[n]);
+                    continue;
+                };
+                if(fork()==0){
+                    strcat(path,"/");
+                    strcat(path,namelist[n]->d_name);
+                    goto label;
                 }
-                //printf("%s\n", dir->d_name);
-            
+                int status;
+                wait(&status);
+                nombre_fichier_texte += WEXITSTATUS(status);
+            } else {
+                nombre_fichier_texte++;
+                printf("%s\n", namelist[n]->d_name);
             }
-            closedir(d);
-            if(strcmp(path,ROOT_PATH) != 0){
-                _exit(0);
-            }
+            free(namelist[n]);
         }
         break;
         
     }
+    if(strcmp(path,ROOT_PATH) == 0){
+        printf("Nombre de fichiers texte: %d\n", nombre_fichier_texte);
+        return 0;
+    }
     
-    return 0;
+    return nombre_fichier_texte;
 }
 
 

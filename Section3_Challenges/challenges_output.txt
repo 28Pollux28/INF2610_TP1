@@ -1,0 +1,663 @@
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_3_level_2
+DID: 52291350
+PDID: 18532754
+FILES:
+file_1_level_3.txt
+PATH: ./root/dir_3_level_1/dir_3_level_2/dir_2_level_3
+DID: 18532759
+PDID: 18532758
+FILES:
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_3_level_2
+DID: 52291350
+PDID: 18532754
+FILES:
+file_1_level_3.txt
+PATH: ./root/dir_3_level_1/dir_3_level_2/dir_0_level_3
+DID: 1439942
+PDID: 1439941
+FILES:
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_3_level_2
+DID: 52291350
+PDID: 18532754
+FILES:
+file_1_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2
+DID: 52291348
+PDID: 34035232
+FILES:
+file_1_level_3.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2/dir_3_level_3
+DID: 34035236
+PDID: 34035235
+FILES:
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2
+DID: 52291348
+PDID: 34035232
+FILES:
+file_1_level_3.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2/dir_2_level_3
+DID: 18532753
+PDID: 18532752
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2
+DID: 52291348
+PDID: 34035232
+FILES:
+file_1_level_3.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2/dir_0_level_3
+DID: 1439938
+PDID: 1439937
+FILES:
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_2_level_2
+DID: 52291348
+PDID: 34035232
+FILES:
+file_1_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_6_level_3
+DID: 34035231
+PDID: 34035230
+FILES:
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_5_level_3
+DID: 18532745
+PDID: 18532744
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_4_level_3
+DID: 3913708
+PDID: 3913707
+FILES:
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_3_level_3
+DID: 52291346
+PDID: 52291345
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_1_level_3
+DID: 34035226
+PDID: 34035225
+FILES:
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2/dir_0_level_3
+DID: 18532737
+PDID: 18532736
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_1_level_2
+DID: 3913709
+PDID: 34035227
+FILES:
+file_2_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_0_level_2
+DID: 18657084
+PDID: 52291334
+FILES:
+file_0_level_3.txt
+PATH: ./root/dir_3_level_1/dir_0_level_2/dir_2_level_3
+DID: 52291338
+PDID: 52291337
+FILES:
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_0_level_2
+DID: 18657084
+PDID: 52291334
+FILES:
+file_0_level_3.txt
+PATH: ./root/dir_3_level_1/dir_0_level_2/dir_1_level_3
+DID: 34035220
+PDID: 34035219
+FILES:
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root/dir_3_level_1/dir_0_level_2
+DID: 18657084
+PDID: 52291334
+FILES:
+file_0_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_3_level_1
+DID: 1439943
+PDID: 52291349
+FILES:
+file_4_level_2.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_2_level_2
+DID: 34035215
+PDID: 34035214
+FILES:
+file_2_level_3.txt
+file_1_level_3.txt
+PATH: ./root/dir_2_level_1/dir_2_level_2/dir_0_level_3
+DID: 52291333
+PDID: 52291332
+FILES:
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_2_level_2
+DID: 34035215
+PDID: 34035214
+FILES:
+file_2_level_3.txt
+file_1_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_1_level_2
+DID: 34035212
+PDID: 34035211
+FILES:
+file_5_level_3.txt
+file_3_level_3.txt
+file_2_level_3.txt
+PATH: ./root/dir_2_level_1/dir_1_level_2/dir_4_level_3
+DID: 18657082
+PDID: 18657081
+FILES:
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_1_level_2
+DID: 34035212
+PDID: 34035211
+FILES:
+file_5_level_3.txt
+file_3_level_3.txt
+file_2_level_3.txt
+PATH: ./root/dir_2_level_1/dir_1_level_2/dir_1_level_3
+DID: 3913699
+PDID: 3913698
+FILES:
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_1_level_2
+DID: 34035212
+PDID: 34035211
+FILES:
+file_5_level_3.txt
+file_3_level_3.txt
+file_2_level_3.txt
+PATH: ./root/dir_2_level_1/dir_1_level_2/dir_0_level_3
+DID: 52309887
+PDID: 52309886
+FILES:
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_1_level_2
+DID: 34035212
+PDID: 34035211
+FILES:
+file_5_level_3.txt
+file_3_level_3.txt
+file_2_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_0_level_2
+DID: 18657075
+PDID: 18657074
+FILES:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+PATH: ./root/dir_2_level_1/dir_0_level_2/dir_5_level_3
+DID: 18657072
+PDID: 18657071
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_0_level_2
+DID: 18657075
+PDID: 18657074
+FILES:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+PATH: ./root/dir_2_level_1/dir_0_level_2/dir_2_level_3
+DID: 3913695
+PDID: 3913694
+FILES:
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_0_level_2
+DID: 18657075
+PDID: 18657074
+FILES:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+PATH: ./root/dir_2_level_1/dir_0_level_2/dir_1_level_3
+DID: 52309880
+PDID: 52309879
+FILES:
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_0_level_2
+DID: 18657075
+PDID: 18657074
+FILES:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+PATH: ./root/dir_2_level_1/dir_0_level_2/dir_0_level_3
+DID: 34035208
+PDID: 34035207
+FILES:
+file_6_level_4.txt
+file_5_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root/dir_2_level_1/dir_0_level_2
+DID: 18657075
+PDID: 18657074
+FILES:
+file_6_level_3.txt
+file_4_level_3.txt
+file_3_level_3.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_2_level_1
+DID: 34035213
+PDID: 34035209
+FILES:
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+PATH: ./root/dir_1_level_1
+DID: 52309873
+PDID: 52309872
+FILES:
+file_3_level_2.txt
+file_2_level_2.txt
+file_1_level_2.txt
+file_0_level_2.txt
+PATH: ./root
+DID: 34035237
+PDID: 3913700
+FILES:
+file_0_level_1.txt
+Nombre de fichiers texte: 130
