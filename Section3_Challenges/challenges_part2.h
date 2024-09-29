@@ -21,8 +21,16 @@ typedef struct {
     short cols;
 } Matrix;
 
+typedef struct {
+    Matrix* A;
+    Matrix* B;
+    Matrix* result;
+    int start;
+    int end;
+    int debug;
+    } multiply_args;
+
 Matrix* multiply(Matrix* A, Matrix* B);
 void* multiply_thread(void* args);
-int max_block_size(int block_size, int rows, int cols);
-int min(int a, int b);
+
 #endif
