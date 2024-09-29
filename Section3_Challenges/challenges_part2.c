@@ -7,7 +7,7 @@
  * Kamil MAARITE 21526203
 */
 #include "challenges_part2.h"
-#define MAX_THREADS 8
+#define MAX_THREADS 12
 
 
 Matrix* multiply(Matrix* A, Matrix* B) {
