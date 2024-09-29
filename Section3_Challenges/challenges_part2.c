@@ -113,27 +113,13 @@ void* multiply_thread(void* args) {
     //         }
     //     }
     // }
-    int block_size = max_block_size(30, end-row, B->cols);
+    int block_size = max_block_size(10, end-row, B->cols);
     for(int ii = row; ii < end; ii+=block_size) {
         for(int jj = 0; jj < result->cols; jj+=block_size) {
             for(int kk = 0; kk < A->cols; kk += block_size) {
-                if(a->debug) {
-                    int i_range = min(block_size,end-ii)+ii;
-                    int j_range = min(block_size,B->cols)+jj;
-                    int k_range = min(block_size,A->cols)+kk;
-                    printf("i range: %d - %d\n", ii, i_range);
-                    printf("j range: %d - %d\n", jj, j_range);
-                    printf("k range: %d - %d\n", kk, k_range);
-                }
                 for(int i = 0; i < min(block_size,end-ii); i++) {
                     for(int j = 0; j < min(block_size,B->cols-jj); j++) {
                         for(int k = 0; k < min(block_size,A->cols-kk); k++) {
-                            int iii = i+ii;
-                            int jjj = jj+j;
-                            int kkk = k+kk;
-                            if(a->debug){
-                                printf("ii+i=%d, jj+j=%d, kk+k=%d, kk=%d, k=%d\n",iii,jjj,kkk,kk,k);
-                            }
                             result->matrix[ii+i][jj+j] += A->matrix[ii+i][kk+k] * B->matrix[kk+k][jj+j];
                         }
                     }
